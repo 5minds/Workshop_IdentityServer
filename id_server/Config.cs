@@ -18,6 +18,11 @@ namespace id_server
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResource(
+                    "demo",
+                    "This serves as a demo Scope!",
+                    new List<string>{ "can_change_accounts", "can_read_accounts" }
+                    ),
             };
         }
 
@@ -47,6 +52,7 @@ namespace id_server
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
+                        "demo"
                     }
                 }
             };
