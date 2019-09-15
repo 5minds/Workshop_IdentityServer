@@ -48,6 +48,7 @@ namespace api
                     options.RequireHttpsMetadata = false;
 
                     options.ClientId = "mvc";
+                    options.Scope.Add("demo");
                     options.SaveTokens = true;
                 });
 
